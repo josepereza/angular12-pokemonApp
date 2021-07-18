@@ -1,0 +1,17 @@
+.container{
+    height: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+.izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-content:center;
+}
+.derecha{
+   width: 80%;
+   text-align: center;
+}

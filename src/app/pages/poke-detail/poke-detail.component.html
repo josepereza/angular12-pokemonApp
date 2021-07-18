@@ -1,0 +1,36 @@
+
+
+
+<div class="container">
+    
+    <div class="izquierda">
+            <mat-card class="mat-elevation-z8" >
+            <mat-card-header>
+                <mat-card-title>{{pokemon.name}}</mat-card-title>
+            </mat-card-header>
+            <img width="200" src="{{pokemon.sprites.front_default}}">
+            <mat-card-content>
+               <span>Height:</span> <span>{{pokemon.height}}</span>
+               <br>  <span>Weight:</span> <span>{{pokemon.weight}}</span>
+
+            </mat-card-content>
+            <mat-card-actions align="start">
+                <button color="accent" mat-raised-button (click)="regresar()">Volver</button>
+                
+            </mat-card-actions>
+            </mat-card>
+        </div>
+       <div class="derecha">
+        <mat-card class="mat-elevation-z8" >
+            <img width="200" src="{{pokemon.sprites.back_default}}">
+            <img width="200" src="{{pokemon.sprites.back_female}}">
+    
+        <img width="200" src="{{pokemon.sprites.back_shiny}}">
+        <img width="200" src="{{pokemon.sprites.back_shiny_female}}">
+        <img width="200" src="{{pokemon.sprites.front_female}}">
+        <img width="200" src="{{pokemon.sprites.front_shiny}}">
+        <img width="200" src="{{pokemon.sprites.front_shiny_female}}">
+
+        </mat-card>
+       </div>
+</div>

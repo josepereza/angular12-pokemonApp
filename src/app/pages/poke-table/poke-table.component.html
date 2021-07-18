@@ -1,0 +1,26 @@
+<div class="cuerpo">
+  <div class="consulta">
+    <mat-form-field appearance="fill">
+        <mat-label>Buscar</mat-label>
+        <input matInput autocomplete="off" (keyup)="applyFilter($event)" #input>
+      </mat-form-field>
+     
+      
+</div>
+
+<div class="container">
+    <mat-card class="example-card" *ngFor="let dato of pokemons | paginate: { itemsPerPage: 6, currentPage: p }">
+        <mat-card-header>
+          <mat-card-title>{{dato.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]=dato.image  style="width: 50%;" alt="Photo of a Shiba Inu" >
+                
+          <a class="boton-detalles" [routerLink]="['/pokeDetail/',dato.position]">Ver detalles</a>
+      
+      </mat-card>
+
+</div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+
+</div>
